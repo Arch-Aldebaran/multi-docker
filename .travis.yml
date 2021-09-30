@@ -11,7 +11,7 @@ script:
   - docker run -e CI=true arch-aldebaran/react-test npm test
 
 after_success:
-  - docker build -t arch-aldebaran/multi-client ./client
+  - docker build -t archaldebaran/multi-client ./client
   - docker build -t arch-aldebaran/multi-nginx ./nginx
   - docker build -t arch-aldebaran/multi-server ./server
   - docker build -t arch-aldebaran/multi-worker ./worker
